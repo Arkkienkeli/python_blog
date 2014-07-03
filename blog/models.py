@@ -22,6 +22,7 @@ class Post(models.Model):
 	category = models.ForeignKey('PostCategory')
 	text = models.TextField(u'Текст поста')
 	visible = models.BooleanField(default=False)
+	date = models.DateTimeField(u'Дата поста',auto_now=True)
 
 	def translite_title(self):
 		b = self.title
